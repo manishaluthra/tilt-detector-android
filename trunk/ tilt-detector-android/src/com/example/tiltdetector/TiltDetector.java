@@ -1,13 +1,5 @@
-/*
- * 
- * IBMEyes.java
- * sample code for IBM Developerworks Article
- * Author: W. Frank Ableson
- * fableson@msiservices.com
- * 
- */
-
 package com.example.tiltdetector;
+
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -69,18 +61,22 @@ public class TiltDetector extends Activity implements SensorListener {
 	            	if (values[1] >= yViewp)
 	            	{
 	            		Text.setText("Direction is: UP");
+	            		setContentView(R.layout.main);
 	            	}
 	            	else if(values[1] <= yViewn)
 	            	{
 	            		Text.setText("Direction is: DOWN");
+	            		setContentView(R.layout.main1);
 	            	}
 	            	else if(values[2] >= zViewp)
 	            	{
-	            		Text.setText("Direction is:LEFT");
+	            		Text.setText("Direction is: LEFT");
+	            		setContentView(R.layout.main2);
 	            	}
 	            	else if(values[2] <= zViewn)
 	            	{
 	            		Text.setText("Direction is: RIGHT");
+	            		setContentView(R.layout.main3);
 	            	}
             	}
             if (sensor == SensorManager.SENSOR_ACCELEROMETER) 
